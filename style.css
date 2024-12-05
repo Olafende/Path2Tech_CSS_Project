@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Setup */
+body {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr; /* Sidebar, Email List, Email View */
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4;
+  gap: 1px; /* Add space between columns */
+}
+
+/* Column 1: Sidebar */
+#col-1 {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#col-1 h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#col-1 .btn {
+  width: 100%;
+  background-color: #ff9900;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#col-1 .btn:hover {
+  background-color: #e68a00;
+}
+
+#col-1 .list {
+  list-style: none;
+  width: 100%;
+}
+
+#col-1 .list li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+#col-1 .list li:hover {
+  background-color: #444;
+}
+
+/* Column 2: Email List */
+#col-2 {
+  background-color: #e6e6e6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.emailSearch {
+  padding: 18px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  margin-bottom: 10px;
+  border: border-box;
+}
+.bubble1 {
+  border-radius: 5px 5px 0px 0px;
+}
+.bubble2 {
+  border-radius: 0px 0px 5px 5px;
+}
+
+#col-2 div {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+#col-2 p {
+  margin: 0;
+}
+
+/* Column 3: Email Content */
+#col-3 {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#col-3 p {
+  margin-bottom: 10px;
+}
+
+#col-3 .msg {
+  resize: auto; 
+  padding: 10px;
+  text-align: top;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+ 
+  margin-top: 10px;
+}
+
+#col-3 .sendEmail {
+  width: 25%;
+  background-color: #ff9900;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#col-3 .sendEmail:hover {
+  background-color: #e68a00;
+}
+
+textarea::placeholder {
+  font-size: 16px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+  #col-1, #col-2, #col-3 {
+      padding: 10px;
+  }
+}
